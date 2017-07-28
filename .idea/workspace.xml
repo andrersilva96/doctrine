@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06821168-2cf5-4631-81e1-90b21d45df01" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/PostController.php" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Categoria.php" afterPath="$PROJECT_DIR$/src/Entity/Categoria.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Post.php" afterPath="$PROJECT_DIR$/src/Entity/Post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/post/criarPost.phtml" afterPath="$PROJECT_DIR$/src/Views/post/criarPost.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/post/editarPost.phtml" afterPath="$PROJECT_DIR$/src/Views/post/editarPost.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/post/listarPost.phtml" afterPath="$PROJECT_DIR$/src/Views/post/listarPost.phtml" />
-    </list>
+    <list default="true" id="06821168-2cf5-4631-81e1-90b21d45df01" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/src/Entity/Post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+              <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -250,12 +241,12 @@
       <workItem from="1501025717539" duration="20087000" />
       <workItem from="1501088328223" duration="28639000" />
       <workItem from="1501184878943" duration="6539000" />
-      <workItem from="1501194665656" duration="4566000" />
+      <workItem from="1501194665656" duration="4715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71747000" />
+    <option name="totallyTimeSpent" value="71896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -600,7 +591,7 @@
     <entry file="file://$PROJECT_DIR$/src/Entity/Post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding />
         </state>
       </provider>

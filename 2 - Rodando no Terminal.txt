@@ -1,0 +1,9 @@
+Valida as entidades e sincronia com o banco:
+vendor\bin\doctrine orm:validate-schema
+
+Cria a Tabela:
+vendor\bin\doctrine orm:schema-tool:create
+
+Atualiza Tabela:
+vendor\bin\doctrine orm:schema-tool:update --dump-sql
+vendor\bin\doctrine orm:schema-tool:update --force
