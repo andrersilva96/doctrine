@@ -1,0 +1,3 @@
+Acessando Route, coloca as rotas.
+
+Cria a ação no Controller e os Views, apenas isso. Igual o Zend.

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <?php foreach($this->view->post as $post): ?>
+                <div class="jumbotron">
+                    <h1 class="display-3">
+                        <?= $post->getTitulo() ?>
+                    </h1>
+                    <hr class="my-4">
+                    <p class="lead">
+                        <?= substr($post->getConteudo(), 0, 20) ?>...
+                    </p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
+                    </p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="col-md-2">
+            <div class="dropdown">
+                <h6 class="dropdown-header">Categorias</h6>
+                <?php foreach($this->view->categoria as $categoria): ?>
+                    <a class="dropdown-item" href="?search=<?= $categoria->getId() ?>"><?= $categoria->getNome() ?></a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</div>
+

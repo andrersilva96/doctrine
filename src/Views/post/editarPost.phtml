@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row-fluid">
+        <form method="post" action="">
+            <div class="form-group">
+                <select name="categoria" class="form-control" required>
+                    <option value="" selected>Selecione a Categoria</option>
+                    <?php foreach ($this->view->categoria as $categoria): ?>
+                        <option value="<?php echo $categoria->getId() ?>"
+                            <?php echo $this->view->post->getCategoria()->getId() == $categoria->getId() ? "selected" : "" ?>>
+                            <?php echo $categoria->getNome() ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Titulo do Post" value="<?= $this->view->post->getTitulo() ?>" maxlength="100" name="titulo" required/>
+            </div>
+            <div class="form-group">
+                <label for="exampleTextarea">Conteúdo do Post</label>
+                <textarea id="content"name="conteudo"  rows="3" class="form-control"><?php echo $this->view->post->getConteudo();?></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>

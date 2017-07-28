@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row-fluid">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Conteudo</th>
+                    <th>ID - Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($this->view->post as $post): ?>
+                <tr>
+                    <th><?= $post->getId() ?></th>
+                    <td><?= $post->getTitulo() ?></td>
+                    <td><?= substr($post->getConteudo(), 0, 20) ?>...</td>
+                    <td><b><?= $post->getCategoria()->getId() ?> - </b><?= $post->getCategoria()->getNome() ?></td>
+                    <td>
+                        <a href="editar-post?id=<?= $post->getId() ?>">Editar</a> |
+                        <a href="remover-post?id=<?= $post->getId() ?>">Remover</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
