@@ -24,6 +24,8 @@ class PostController extends Action
 
         if($_POST){
             $post = new Post();
+            // Verifica o estado da entidade se esta gerenciada e etc
+            //$entityManager->getUnitOfWork()->getEntityState($post);
             $post->setTitulo($_POST['titulo']);
             $post->setConteudo($_POST['conteudo']);
 
@@ -52,7 +54,6 @@ class PostController extends Action
             $post->setConteudo($_POST['conteudo']);
             $post->setCategoria($entityManager->getReference(Categoria::class, $_POST['categoria']));
 
-            $entityManager->persist($post);
             $entityManager->flush();
             header('Location:/listar-post');
         }
