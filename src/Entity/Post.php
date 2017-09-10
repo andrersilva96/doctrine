@@ -45,7 +45,7 @@ class Post
     /**
      * @param mixed $categoria
      */
-    public function setCategoria(Categoria $categoria)
+    public function setCategoria($categoria)
     {
         $this->categoria = $categoria;
     }
