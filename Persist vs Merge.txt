@@ -1,0 +1,24 @@
+Merge: Ele faz uma cópia da entidade para ser gerenciada, por exem:
+
+$categoria = $entityManager->find(Categoria::class);
+$categoria->setNome('Primeiro Nome');
+$entityManager->merge($categoria);
+$entityManager->flush();
+
+// Segundo registro
+$categoria->setNome('Segundo Nome');
+// Aqui a categoria perdeu o id pq eh uma copia, entao ele vai inserir
+$entityManager->merge($categoria);
+$entityManager->flush();
+
+-------------------------------------------------------------------------
+Persist: A Entidade já fica gerenciada e podemos fazer o que quiser:
+
+$categoria = $entityManager->getRepository(Categoria::class);
+$categoria->setNome('Primeiro Nome');
+$entityManager->persist($categoria);
+$entityManager->flush();
+
+// Segundo registro
+$categoria->setNome('Segundo Nome');
+$entityManager->flush();
