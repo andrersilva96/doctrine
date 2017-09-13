@@ -30,7 +30,7 @@ class PostController extends Action
             $post->setConteudo($_POST['conteudo']);
 
             // Ao inves de eu passar meu id na categoria, eu tenho que passar meu objeto da categoria que eu quero relacionar
-            $categoria = $entityManager->getReference('App\Entity\Categoria', $_POST['categoria']);
+            $categoria = $entityManager->getReference(Categoria::class, $_POST['categoria']);
             $post->setCategoria($categoria);
             $entityManager->persist($post);
             $entityManager->flush();

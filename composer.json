@@ -6,6 +6,7 @@
         }
     },
     "require": {
-        "doctrine/orm": "2.5.*"
+        "doctrine/orm": "2.5.*",
+        "symfony/var-dumper": "^3.3"
     }
 }
