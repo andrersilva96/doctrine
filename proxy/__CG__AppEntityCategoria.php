@@ -64,10 +64,10 @@ class Categoria extends \App\Entity\Categoria implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nome', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'post'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nome', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'dataCriada', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'posts'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nome', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'post'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'nome', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'dataCriada', '' . "\0" . 'App\\Entity\\Categoria' . "\0" . 'posts'];
     }
 
     /**
@@ -173,6 +173,50 @@ class Categoria extends \App\Entity\Categoria implements \Doctrine\ORM\Proxy\Pro
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getDataCriada()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDataCriada', []);
+
+        return parent::getDataCriada();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setDataCriada()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDataCriada', []);
+
+        return parent::setDataCriada();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPosts()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPosts', []);
+
+        return parent::getPosts();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPosts($posts)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPosts', [$posts]);
+
+        return parent::setPosts($posts);
+    }
+
     /**
      * {@inheritDoc}
      */

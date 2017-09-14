@@ -4,10 +4,13 @@ namespace App\Entity;
 
 /**
  * @Entity
+ * @HasLifecycleCallbacks
  * @Table(name="categoria")
  */
 class Categoria
 {
+    use TimestampTrait;
+
     /**
      * @Id
      * @Column(type="integer", nullable=false)
