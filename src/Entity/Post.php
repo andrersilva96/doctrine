@@ -28,7 +28,7 @@ class Post
     private $conteudo;
 
     /**
-     * @ManyToOne(targetEntity="App\Entity\Categoria", inversedBy="post")
+     * @ManyToOne(targetEntity="App\Entity\Categoria", inversedBy="posts")
      */
     private $categoria;
 

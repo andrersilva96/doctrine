@@ -23,7 +23,7 @@ class Categoria
     /**
      * @OneToMany(targetEntity="App\Entity\Post", mappedBy="categoria")
      */
-    private $post;
+    private $posts;
 
     /**
      * @return mixed
