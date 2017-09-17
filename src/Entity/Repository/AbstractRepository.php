@@ -10,6 +10,7 @@ class AbstractRepository extends EntityRepository
     public function getReference($id, $class = null)
     {
         if(!$class){
+            //obtem o nome do meu repositorio
             $class = $this->getClassName();
         }
         return $this->getEntityManager()->getReference($class, $id);
