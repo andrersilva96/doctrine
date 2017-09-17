@@ -7,12 +7,12 @@ use Doctrine\ORM\UnitOfWork;
 
 class AbstractRepository extends EntityRepository
 {
-    public function getReference($id,$class = null)
+    public function getReference($id, $class = null)
     {
         if(!$class){
             $class = $this->getClassName();
         }
-        return $this->getEntityManager()->getReference($class,$id);
+        return $this->getEntityManager()->getReference($class, $id);
     }
 
     public function save($entity)
@@ -30,7 +30,13 @@ class AbstractRepository extends EntityRepository
     public function delete($id)
     {
         $entity = $this->getReference($id);
+        // Remove eh o que deleta do banco
         $this->getEntityManager()->remove($entity);
         $this->getEntityManager()->flush();
     }
+
+    //findOneByTitulo('teste', ['id' => 'desc']); Encontra um registro pelo titulo decrescente
+    //findOneBy(['titulo' => 'teste', 'conteudo' => 'teste conteudo'], ['id' => 'desc'])
+    //findByTitulo('teste', ['id' => 'desc']); Encontra todos os registro pelo titulo decrescente
+    //findBy(['titulo' => 'teste', 'conteudo' => 'teste conteudo'])
 }

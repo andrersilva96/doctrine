@@ -58,13 +58,8 @@ class CategoriaController extends Action
 
     public function removerCategoria()
     {
-        $entityManager = getEntityManager();
-        $repositorio = $entityManager->getRepository(Categoria::class);
-        $categoria = $repositorio->find($_GET['id']);
-        // Remove eh o que deleta do banco
-        $entityManager->remove($categoria);
-        $entityManager->flush();
-
+        $abstractRepository = getEntityManager()->getRepository(Categoria::class);
+        $abstractRepository->delete($_GET['id']);
         header('Location:/listar-categoria');
     }
 }
