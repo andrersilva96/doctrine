@@ -21,6 +21,7 @@ class IndexController extends Action
                 ->where($query->expr()->eq('c.id', $_GET['search']));
             //echo $query->getQuery()->getSql(); // printa o sql
             // Retorna o resultado da query que foi consultada
+            //getArrayResult retorna como array
             $posts = $query->getQuery()->getResult();
         } else {
             $posts = $repPost->findAll();
