@@ -1,8 +1,11 @@
 <?php
 
-use Doctrine\ORM\EntityRepository;
+namespace App\Entity\Repository;
 
-abstract class AbstractRepository extends EntityRepository
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\UnitOfWork;
+
+class AbstractRepository extends EntityRepository
 {
     public function getReference($id,$class = null)
     {
@@ -16,8 +19,10 @@ abstract class AbstractRepository extends EntityRepository
     {
         //se for uma entidade nova ele insere nova
         if($this->getEntityManager()->getUnitOfWork()->getEntityState($entity) == UnitOfWork::STATE_NEW){
+            // Persiste apenas diz ao Doctrine qual entidade do banco nos vamos modular
             $this->getEntityManager()->persist($entity);
         }
+        // Eh o que faz o CRUD
         $this->getEntityManager()->flush();
         return $entity;
     }

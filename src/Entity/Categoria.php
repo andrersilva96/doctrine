@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 /**
- * @Entity(repositoryClass="App\Repository\CategoriaRepository")
+ * @Entity(repositoryClass="App\Entity\Repository\CategoriaRepository")
  * @HasLifecycleCallbacks
  * @Table(name="categoria")
  */

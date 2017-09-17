@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Categoria;
+use App\Entity\Repository\AbstractRepository;
 use Init\Controller\Action;
 
 class CategoriaController extends Action
@@ -26,11 +27,9 @@ class CategoriaController extends Action
             // Seta o valor que tem que inserir
             $categoria->setNome($_POST['nome']);
 
-            $entityManager = getEntityManager();
-            // Persiste apenas diz ao Doctrine qual entidade do banco nos vamos modular
-            $entityManager->persist($categoria);
-            // Eh o que faz o CRUD
-            $entityManager->flush();
+            $categoriaRepository = getEntityManager()->getRepository(Categoria::class);
+            $categoriaRepository->save($categoria);
+
             header('Location:/listar-categoria');
         }
 
